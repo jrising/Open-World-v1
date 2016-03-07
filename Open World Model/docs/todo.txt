@@ -1,0 +1,29 @@
+Next steps:
+  * Go through history and see what I can do with it without going too deep.
+  * Construct heat diffusion in 1-D model
+  * Construct SocialNetwork -> Desired <-> Temp <-> Edge <- Linear "hot plate" model
+
+-----
+
+Principles:
+  * Every combination of nodes across maps represents a system (exists a mapping)
+  * Need a language (not sysdyn!) to explain how connections result in an sysdyn elements value
+  * These systems share state across connections-- each system component could have a different world of connections
+
+Future ideas:
+  * They also share the systems themselves over the connection, as memes
+  * Each "location" is self-similarly another system, just as are any components of that system, and the connections
+		by which geographic locations are connected are the same as the connections by which components of a system
+		are connected!
+  * Want Fractalness for free, and want both whole systems and connection-worlds to be instantiable-but-modifyable.
+
+-----
+
+Say we encode the World 3 Model.
+Then, overlay a geographic division.  (*Should I pursue this idea of divisions?)
+
+Say we implement a Physics Weather Model.
+It's is alemental by nature, and all the logic is in the connections between.
+
+I should pursue the the idea of a fractal...
+I think that I should try to figure out the nature of equations in a fractal world...

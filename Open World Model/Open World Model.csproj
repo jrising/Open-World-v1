@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CB827767-1F72-4506-8F14-5B0991561CA4}</ProjectGuid>
+    <ProjectTypeGuids>{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OpenWorldModel</RootNamespace>
+    <AssemblyName>Open World Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="Microsoft.VisualBasic" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="web.config" />
+    <Content Include="Default.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="history\HistoricalGeography.cs" />
+    <Compile Include="history\SpaceTime.cs" />
+    <Compile Include="history\GeographicMap.cs" />
+    <Compile Include="history\HistoricalGeographicMap.cs" />
+    <Compile Include="history\DividedRange.cs" />
+    <Compile Include="history\IProperty.cs" />
+    <Compile Include="history\ISystem.cs" />
+    <Compile Include="history\IHistoricalGeographicMap.cs" />
+    <Compile Include="history\Measurement.cs" />
+    <Compile Include="history\NamedProperty.cs" />
+    <Compile Include="history\AmbiguousSystem.cs" />
+    <Compile Include="poverty\SOCPovertyTraps.cs" />
+    <Compile Include="sysdyn\Stock.cs" />
+    <Compile Include="sysdyn\SimplePopulationStock.cs" />
+    <Compile Include="sysdyn\Variable.cs" />
+    <Compile Include="sysdyn\RandomVariable.cs" />
+    <Compile Include="sysdyn\Constant.cs" />
+    <Compile Include="sysdyn\Function.cs" />
+    <Compile Include="selforg\Node.cs" />
+    <Compile Include="selforg\Edge.cs" />
+    <Compile Include="selforg\CircleGraph.cs" />
+    <Compile Include="poverty\SolowModel.cs" />
+    <Compile Include="selforg\NodeVariable.cs" />
+    <Compile Include="selforg\HeartBeatVariable.cs" />
+    <Compile Include="selforg\StepNodeAction.cs" />
+    <Compile Include="selforg\GraphVariable.cs" />
+    <Compile Include="sysdyn\MemoizedVariable.cs" />
+    <Compile Include="econometrics\SimpleTests.cs" />
+    <Compile Include="econometrics\TimeSeries.cs" />
+    <Compile Include="econometrics\Matrix.cs" />
+    <Compile Include="econometrics\ColumnVector.cs" />
+    <Compile Include="econometrics\DataReader.cs" />
+    <Compile Include="econometrics\DataMatrix.cs" />
+    <Compile Include="econometrics\Estimate.cs" />
+    <Compile Include="selforg\NodeStock.cs" />
+    <Compile Include="sysdyn\TemporalVariable.cs" />
+    <Compile Include="sysdyn\Delay.cs" />
+    <Compile Include="sysdyn\PassiveDelay.cs" />
+    <Compile Include="selforg\NodeConstant.cs" />
+    <Compile Include="poverty\CollectCountry.cs" />
+    <Compile Include="econometrics\HandleQuotesStream.cs" />
+    <Compile Include="poverty\IndicatorDevelopmentScaling.cs" />
+    <Compile Include="econometrics\OLS.cs" />
+    <Compile Include="dims\AbstractDimensions.cs" />
+    <Compile Include="dims\ConvertibleDimensions.cs" />
+    <Compile Include="dims\Dimensionless.cs" />
+    <Compile Include="dims\GlobalDimensions.cs" />
+    <Compile Include="dims\IDimensions.cs" />
+    <Compile Include="dims\Dims.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <None Include="docs\todo.txt" />
+    <None Include="dims\notes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="history\" />
+    <Folder Include="selforg\" />
+    <Folder Include="sysdyn\" />
+    <Folder Include="poverty\" />
+    <Folder Include="econometrics\" />
+    <Folder Include="docs\" />
+    <Folder Include="dims\" />
+  </ItemGroup>
+</Project>

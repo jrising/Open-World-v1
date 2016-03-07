@@ -1,0 +1,11 @@
+{water: { 
+	atmosphere: {volume: .013e15, units: 'm^3', precision: .001},
+	land: {volume: 33.6e15, units: 'm^3', precision: .1},
+	ocean: {volume: 1350e15, units: 'm^3', precision: 10},
+	flows: [
+		{from: atmosphere, to: land, volume: 99e12, units: 'm^3/yr', precision: 1},
+		{from: land, to: atmosphere, volume: 62e12, units: 'm^3/yr', precision: 1},
+		{from: land, to: ocean, volume: 37e12, units: 'm^3/yr', precision: 1},
+		{from: atmosphere, to: ocean, volume: 324e12, units: 'm^3/yr', precision: 1},
+		{from: ocean, to: atmosphere, volume: 361e12, units: 'm^3/yr', precision: 1}]},
+	source: "Physical Geography: A Landscape Appreciation, 6/e, 1999"}
